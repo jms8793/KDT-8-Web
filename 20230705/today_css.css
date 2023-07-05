@@ -1,0 +1,63 @@
+/* 일치 선택자 */
+span.orange {
+  color: orange;
+}
+/* 자식 선택자 (하위 한 단계만)*/
+ul > .orange {
+  background-color: gray;
+}
+/* 하위 선택자 (몇 단계든 하위 전부)*/
+ul .orange {
+  font-weight: bold;
+}
+/* 인접 형제 선택자 (다음 형제 하나)*/
+.orange + li {
+  font-size: 30px;
+}
+/* 일반 형제 선택자 (다음 형제 모두) */
+.orange ~ li {
+  color: blue;
+}
+a:hover {
+  color: red;
+}
+a:active {
+  background-color: black;
+  color: white;
+}
+input:focus {
+  background-color: lightgray;
+}
+
+.fruits span:first-child {
+  color: red;
+}
+
+.fruits div:first-child {
+  /* 작동 X */
+  color: blue;
+}
+
+.fruits h3:last-child {
+  text-decoration: underline;
+}
+
+.fruits p:last-child {
+  color: aqua;
+}
+
+.fruits *:nth-child(2n) {
+  font-weight: bold;
+}
+
+.fruits *:not(span) {
+  background-color: aquamarine;
+}
+
+input[disabled] {
+  background-color: black;
+}
+
+input[type="password"] {
+  color: red;
+}
