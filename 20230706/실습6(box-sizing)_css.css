@@ -1,0 +1,14 @@
+div {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  border: 15px solid red;
+  background-color: orange;
+  margin-bottom: 30px;
+}
+.box1 {
+  box-sizing: border-box;
+}
+.box2 {
+  box-sizing: content-box;
+}

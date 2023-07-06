@@ -1,0 +1,28 @@
+.container {
+  width: auto;
+  height: 200px;
+  background-color: orange;
+}
+.box1 {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+  margin-right: 30px;
+  display: inline-block;
+}
+
+.box2 {
+  width: 200px;
+  height: 100px;
+  background-color: green;
+  margin-right: 30px;
+  display: inline-block;
+}
+
+.box3 {
+  width: 200px;
+  height: 100px;
+  background-color: red;
+  margin-right: 30px;
+  display: inline-block;
+}

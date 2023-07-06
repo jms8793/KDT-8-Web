@@ -1,0 +1,32 @@
+body {
+  background-color: beige;
+}
+
+.box1 {
+  background-color: skyblue;
+  width: 300px;
+  height: 300px;
+  border-width: 10px 15px 20px 25px;
+  border-style: solid dashed dotted double;
+  border-color: blue aqua green greenyellow;
+}
+
+.box2 {
+  background-color: gray;
+  width: 300px;
+  height: 300px;
+  margin-top: 30px;
+  border-top-style: groove;
+  border-top-width: 20px;
+  border-top-color: aqua;
+  border-right-style: solid;
+  border-right-width: 30px;
+  border-right-color: darkgreen;
+  border-bottom-style: ridge;
+  border-bottom-width: 25px;
+  border-bottom-color: blueviolet;
+  border-left-style: inset;
+  border-left-width: 40px;
+  border-left-color: brown;
+  border-radius: 75px 100px 50px 25px;
+}
