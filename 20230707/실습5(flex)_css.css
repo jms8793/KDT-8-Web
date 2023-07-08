@@ -1,0 +1,23 @@
+.container {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+div div {
+  width: 100px;
+  height: 100px;
+}
+
+.item1 {
+  background-color: aqua;
+}
+
+.item2 {
+  background-color: skyblue;
+}
+
+.item3 {
+  background-color: deepskyblue;
+}
