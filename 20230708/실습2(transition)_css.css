@@ -1,0 +1,19 @@
+div {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  color: white;
+  border: solid;
+  overflow: auto;
+  transition-duration: 2s;
+  transition-property: all;
+  transition-timing-function: ease;
+  transition-delay: 0.5s;
+}
+
+div:hover {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  color: black;
+}

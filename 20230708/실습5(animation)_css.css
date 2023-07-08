@@ -1,0 +1,210 @@
+body {
+  background-color: aquamarine;
+  animation-name: changeBackground;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+img {
+  position: absolute;
+}
+
+.city {
+  width: 400px;
+  height: 200px;
+  left: 400px;
+  top: 250px;
+  z-index: 1;
+}
+
+.moon {
+  top: 75px;
+  left: 300px;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  animation-name: fallingmoon;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+.sun {
+  top: 75px;
+  left: 300px;
+  width: 100px;
+  height: 100px;
+  z-index: 3;
+  animation-name: risingsun;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+.bigCloud {
+  left: 350px;
+  top: 170px;
+  width: 150ox;
+  height: 50px;
+  z-index: 4;
+  animation-name: moveBigCloud;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.smallCloud {
+  left: 400px;
+  top: 225px;
+  width: 750ox;
+  height: 25px;
+  z-index: 5;
+  animation-name: moveSmallCloud;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes risingsun {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fallingmoon {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes moveBigCloud {
+  0% {
+    left: 350px;
+    top: 170px;
+    opacity: 0;
+  }
+  12.5% {
+    left: 500px;
+    top: 170px;
+  }
+  25% {
+    opacity: 1;
+    left: 650px;
+    top: 170px;
+  }
+  37.5% {
+    left: 800px;
+    top: 170px;
+  }
+  50% {
+    opacity: 0;
+    left: 950px;
+    top: 170px;
+  }
+  62.5% {
+    opacity: 0;
+    left: 800px;
+    top: 170px;
+  }
+  75% {
+    opacity: 1;
+    left: 650px;
+    top: 170px;
+  }
+  87.5% {
+    opacity: 0;
+    left: 500px;
+    top: 170px;
+  }
+  100% {
+    opacity: 0;
+    left: 300px;
+    top: 170px;
+  }
+}
+
+@keyframes moveSmallCloud {
+  0% {
+    left: 300px;
+    top: 170px;
+    opacity: 0;
+  }
+  12.5% {
+    opacity: 1;
+  }
+  25% {
+    left: 950px;
+    top: 170px;
+    opacity: 0;
+  }
+  37.5% {
+    opacity: 1;
+  }
+  50% {
+    left: 300px;
+    top: 170px;
+    opacity: 0;
+  }
+  62.5% {
+    opacity: 1;
+  }
+  75% {
+    left: 950px;
+    top: 170px;
+    opacity: 0;
+  }
+  87.5% {
+    opacity: 1;
+  }
+  100% {
+    left: 300px;
+    top: 170px;
+    opacity: 0;
+  }
+}
+
+@keyframes changeBackground {
+  0% {
+    background-color: darkslateblue;
+  }
+  25% {
+    background-color: skyblue;
+  }
+  50% {
+    background-color: pink;
+  }
+  75% {
+    background-color: black;
+  }
+  100% {
+    background-color: darkslateblue;
+  }
+}

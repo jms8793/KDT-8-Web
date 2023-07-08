@@ -1,0 +1,27 @@
+img {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+}
+img:hover {
+  transform: skewY(30deg);
+  backface-visibility: hidden;
+}
+
+.img1 {
+  top: 150px;
+  left: 100px;
+  z-index: 3;
+}
+
+.img2 {
+  top: 100px;
+  left: 200px;
+  z-index: 2;
+}
+
+.img3 {
+  top: 50px;
+  left: 300px;
+  z-index: 1;
+}

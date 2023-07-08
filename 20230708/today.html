@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="totday_css.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* div {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        transition: width 2s ease 0.5s;
+        transition-property: width;
+        transition-duration: 2s;
+        transition-timing-function: ease;
+        transition-delay: 0;
+      }
+      div:hover {
+        width: 300px;
+      }
+      img {
+        width: 300px;
+        height: 300px;
+      }
+      img:hover {
+        transform: skew(45deg);
+      } */
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: cyan;
+        position: relative;
+        animation-name: myanim;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        animation-delay: 1s;
+      }
+
+      @keyframes myanim {
+        0% {
+          left: 0px;
+          top: 0px;
+        }
+        25% {
+          left: 200px;
+          top: 0px;
+        }
+        50% {
+          left: 200px;
+          top: 0px;
+        }
+        75% {
+          left: 100px;
+          top: 00px;
+        }
+        100% {
+          left: 0px;
+          top: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
