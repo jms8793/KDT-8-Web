@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let str = "happy day~!";
+
+      // 1. 문자열 길이 확인
+      console.log("length :", str.length);
+
+      // 2. 대/소문자로 바꾸기
+      console.log("toUpperCase :", str.toLocaleLowerCase);
+      console.log("toLowerCase :", str.toLowerCase);
+
+      // 3. index 가져오기
+      console.log("index : ", str.indexOf("h"));
+      console.log("index: ", str.lastIndexOf("y"));
+
+      /// 4. 문자열 슬라이싱 (첫번째는 필수, 두번째는 선택)
+      console.log("slice : ", str.slice(0, 4));
+
+      // 5. 바꾸기
+      // replace : 제일 먼저 찾아지는 한 놈만 바꿈
+      console.log("replace p -> a : ", str.replace("p", "a"));
+      console.log("replaceAll a -> k : ", str.replaceAll("a", "k"));
+
+      // 6. 반복
+      console.log("repeat : ", str.repeat(10));
+
+      // 7. split : 문자열을 내가 원하는 부분에서 자르고, 그걸 리스트로 만들어줌
+      // 기준 값은 사라짐
+      console.log("split : ", str.split(""));
+      console.log("split : ", str.split(" "));
+      console.log("split : ", str.split("a"));
+
+      // 8. trin : 공백 제거
+      console.log("trim 전 : ", str);
+      console.log("trim : ", str.trim());
+    </script>
+  </head>
+  <body></body>
+</html>
