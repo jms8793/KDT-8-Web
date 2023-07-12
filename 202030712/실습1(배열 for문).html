@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let numArr = [];
+
+      for (let i = 0; numArr.length < 100; i++) {
+        numArr.push(i + 1);
+      }
+      console.log(numArr);
+      let sum1 = 0;
+      let sum2 = 0;
+      let sum3 = 0;
+      // for 문
+      for (let i = 0; i < numArr.length; i++) {
+        sum1 += numArr[i];
+      }
+      console.log("sum1(for) : ", sum1);
+
+      for (let n of numArr) {
+        sum2 += n;
+      }
+      console.log("sum2(for of) : ", sum2);
+
+      numArr.forEach((f, index, arr) => {
+        sum3 += f;
+      });
+      console.log("sum3(forEach) : ", sum3);
+    </script>
+  </head>
+  <body></body>
+</html>
