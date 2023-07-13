@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="box" id="green">1</div>
+      previous 테스트
+      <div class="box" id="red">2</div>
+      next 테스트
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+    </div>
+    <button onclick="getParent()">getParent</button>
+    <button onclick="pSibling()">previousSibling</button>
+    <button onclick="pESibling()">previousElementSibling</button>
+    <button onclick="nSibling()">nextSibling</button>
+    <button onclick="nESibling()">nextElementSibling</button>
+    <script>
+      let container = document.getElementById("container");
+      let redDiv = document.getElementById("red");
+
+      function getParent() {
+        console.log(container.parentNode);
+      }
+      // parentNode : 부모 요소를 가져온다.
+      function pSibling() {
+        // 앞 형제 요소 가져옴(text와 주석 모두 node로 취급)
+        console.log(redDiv.previousSibling);
+      }
+
+      function pESibling() {
+        // 앞 형제 요소 가져옴(요소만 node로 취급)
+        console.log(redDiv.previousElementSibling);
+      }
+      function nSibling() {
+        // 뒤 형제 노드
+        console.log(redDiv.nextSibling);
+      }
+      function nESibling() {
+        // 뒤 형제 노드
+        console.log(redDiv.nextElementSibling);
+      }
+    </script>
+  </body>
+</html>

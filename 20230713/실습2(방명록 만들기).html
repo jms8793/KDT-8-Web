@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./실습2(방명록 만들기)_css.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>방명록입니다.</p>
+    <p>
+      <div class="p1">작성자</div>
+      <div><input type="text" id="writer" /></div>
+    </p>
+    <p>
+      <div class="p1">내용</div>
+      <div><textarea id="content" cols="100" rows="1"></textarea></div> 
+    </p>
+    <button id="write" onclick="writeClick()">작성</button>
+    <table border="1" id="record">
+      <th class="number">번호</th>
+      <th class="writer">작성자</th>
+      <th class="content">내용</th>
+      <th class="date">작성일</th>
+    </table>
+    <script>
+      let num = 1;
+
+      function writeClick() {
+        // input 태그 내용 가져오기
+        let writer = document.getElementById("writer").value;
+        let content = document.getElementById("content").value;
+
+        // 테이블에 추가할 요소 생성
+        let tr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
+        let td4 = document.createElement("td");
+
+        // 작성일에 들어갈 변수 생성
+        let today = new Date();
+        let year = today.getFullYear(); // 년도
+        let month = today.getMonth() + 1; // 월
+        let date = today.getDate(); // 날짜
+        let day = today.getDay(); // 요일
+        let hours = today.getHours(); // 시
+        let minutes = today.getMinutes(); // 분
+
+        // 테이블에 들어갈 text 설정
+        td1.innerText = num;
+        td2.innerText = writer;
+        td3.innerText = content;
+        td4.innerText =
+          year + "-" + month + "-" + day + " " + hours + ":" + minutes;
+
+        // table 선택
+        let table = document.querySelector("table");
+
+        // table에 추가
+        table.appendChild(tr);
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+
+        // 번호 증가
+        num += 1;
+
+        document.getElementById("writer").value = "";
+        document.getElementById("content").value = "";
+      }
+    </script>
+  </body>
+</html>

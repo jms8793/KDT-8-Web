@@ -1,0 +1,32 @@
+table {
+  text-align: center;
+  width: 500px;
+}
+
+.number {
+  width: 50px;
+}
+
+.writer {
+  width: 100px;
+}
+
+.content {
+  width: 200px;
+}
+
+.date {
+  width: 150px;
+}
+
+button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.p1 {
+  text-align: center;
+  width: 50px;
+  float: left;
+  height: 5%;
+}
