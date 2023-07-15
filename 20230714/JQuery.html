@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // $(선택자).(함수();
+      // $() : parameter로 선택자를 받아 특정 HTML 요소를 선택한다. -> 선택된 요소는 jquery 객체
+      // 함수 : jquery 메소드
+      function setValue() {
+        // document.getElementById("input").value = "안녕";
+        $("#input").val("안녕");
+      }
+      function getValue() {
+        // value값 가져오기
+        // document 사용
+        // let value = document.getElementById("input");
+        // jquery 문법 이용
+        let value = $("#input").val();
+
+        alert(value);
+      }
+      function changeStyle() {
+        // let div = documnet.querySelector("div");
+        // div.style = "border : 1px solid black";
+
+        // $().css("속성",속성값);
+        $("div").css("border", "10px solid black");
+      }
+      function changeText() {
+        // let div = document.querySelector("div");
+        // div.innerText = "jquery 사용 전";
+        // $().text();
+        $("div").text("<b>jquery 사용 후<b>");
+      }
+      function changeAttribute() {
+        // let a = document.querySelector("a");
+        // a.setAttribute("href", "https://google.com");
+        // setAttribute(속성, 속성값);
+
+        // $().attr("속성", "속성값");
+        $("a").attr("href", "https://google.com");
+      }
+      function changeHTML() {
+        // let div = document.querySelector("div");
+        // div.innerHTML = "jquery 사용 전";
+
+        // $().html();
+        $("div").html("<b>jquery 사용 후<b>");
+      }
+    </script>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+      }
+      .div1 {
+        background-color: red;
+      }
+      .div2 {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://naver.com" target="_blank">NAVER</a>
+    <br />
+    <input type="text" value="123" id="input" />
+    <div class="div1"></div>
+    <div class="div2"></div>
+
+    <button onclick="setValue()">setValue</button>
+    <button onclick="getValue()">getValue</button>
+    <br />
+    <button onclick="changeStyle()">changeStyle</button>
+    <button onclick="changeText()">changeText</button>
+    <!-- innerText -->
+    <br />
+    <button onclick="changeAttribute()">changeAttribute</button>
+    <!-- setAttribute -->
+    <button onclick="changeHTML()">getValue</button>
+    <!-- innerHTML -->
+  </body>
+</html>

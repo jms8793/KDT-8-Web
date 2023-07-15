@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <button>쿨럭</button>
+    <input type="text" name="" id="" />
+    <script>
+      // 로딩 이벤트
+      window.addEventListener("load", function () {});
+      $(window).ready(function () {
+        console.log("로드 완료1");
+      });
+      $(document).ready(function () {
+        console.log("로드 완료2");
+      });
+      $(function () {
+        console.log("로드 완료3");
+      });
+      // $().on("click")
+      // addEventListner("click")
+
+      $("button").click(function () {
+        alert("클릭");
+      });
+      $("input").keyup(function (e) {
+        console.log(e);
+        console.log(e.key);
+        console.log(e.keyCode);
+        console.log(e.currentTarget);
+        console.log(e.currentTarget.value);
+      });
+      // on 함수를 이용하지 않고 바로 쓸 수 있는 이벤트 함수
+      // click, scroll, mousover, hover, keyup, keydown
+    </script>
+  </body>
+</html>

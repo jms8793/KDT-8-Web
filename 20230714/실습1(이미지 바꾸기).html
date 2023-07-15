@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 바꾸기</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .container {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        position: relative;
+      }
+      .box1 {
+        margin: auto;
+        width: 400px;
+        height: 475px;
+        border: 1px solid gray;
+      }
+      img {
+        width: 400px;
+        height: 475px;
+      }
+      .box2 {
+        text-align: center;
+      }
+      button {
+        background-color: black;
+        color: white;
+        margin: auto;
+      }
+    </style>
+    <script>
+      function change_apple() {
+        $("#fruit").attr("src", "사과.png");
+      }
+
+      function change_banana() {
+        $("#fruit").attr("src", "바나나.png");
+      }
+
+      function change_grape() {
+        $("#fruit").attr("src", "포도.png");
+      }
+
+      function change_peach() {
+        $("#fruit").attr("src", "복숭아.png");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1"><img id="fruit" src="" alt="과일 자리" /></div>
+      <div class="box2">
+        <button onclick="change_apple()">사과</button>
+        <button onclick="change_banana()">바나나</button>
+        <button onclick="change_grape()">포도</button>
+        <button onclick="change_peach()">복숭아</button>
+      </div>
+    </div>
+  </body>
+</html>

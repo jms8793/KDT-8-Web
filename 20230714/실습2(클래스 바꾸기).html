@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클래스 바꾸기</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+      integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      div {
+        width: 500px;
+        height: 500px;
+      }
+      .class1 {
+        background-color: red;
+      }
+      .class2 {
+        background-color: orange;
+      }
+      .class3 {
+        background-color: yellow;
+      }
+      .class4 {
+        background-color: green;
+      }
+      .class5 {
+        background-color: blue;
+      }
+      .class6 {
+        background-color: darkblue;
+      }
+      .class7 {
+        background-color: purple;
+      }
+    </style>
+    <script>
+      var class_num = 1;
+      function change_class() {
+        if (class_num === 7) {
+          $("div").switchClass(`class${class_num}`, `class1`);
+          class_num = 1;
+        } else {
+          $("div").switchClass(`class${class_num}`, `class${class_num + 1}`);
+          class_num += 1;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="class1" onclick="change_class()"></div>
+  </body>
+</html>
