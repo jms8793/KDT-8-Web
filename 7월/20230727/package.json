@@ -1,0 +1,21 @@
+{
+  "name": "jms",
+  "version": "1.0.0",
+  "description": "node.js basic",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "test"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "jms",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
