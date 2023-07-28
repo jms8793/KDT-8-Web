@@ -35,33 +35,61 @@
         margin: auto;
       }
     </style>
-    <script>
-      function change_apple() {
-        $("#fruit").attr("src", "사과.png");
+    <!-- <script>
+      function change_fruits() {
+        let choice = $(this).attr("id");
+        $("#fruit").attr("src", `${choice}.png`);
+        console.log(choice);
       }
 
-      function change_banana() {
-        $("#fruit").attr("src", "바나나.png");
-      }
+      // function change_apple() {
+      //   $("#fruit").attr("src", "사과.png");
+      // }
 
-      function change_grape() {
-        $("#fruit").attr("src", "포도.png");
-      }
+      // function change_banana() {
+      //   $("#fruit").attr("src", "바나나.png");
+      // }
 
-      function change_peach() {
-        $("#fruit").attr("src", "복숭아.png");
-      }
-    </script>
+      // function change_grape() {
+      //   $("#fruit").attr("src", "포도.png");
+      // }
+
+      // function change_peach() {
+      //   $("#fruit").attr("src", "복숭아.png");
+      // }
+    </script> -->
   </head>
   <body>
     <div class="container">
-      <div class="box1"><img id="fruit" src="" alt="과일 자리" /></div>
+      <div class="box1"><img id="fruit" src="apple.png" alt="과일 자리" /></div>
       <div class="box2">
-        <button onclick="change_apple()">사과</button>
-        <button onclick="change_banana()">바나나</button>
-        <button onclick="change_grape()">포도</button>
-        <button onclick="change_peach()">복숭아</button>
+        <button value="apple" onclick="change_fruits()">사과</button>
+        <button value="banana" onclick="change_fruits()">바나나</button>
+        <button value="grape" onclick="change_fruits()">포도</button>
+        <button value="peach" onclick="change_fruits()">복숭아</button>
       </div>
     </div>
+    <script>
+      function change_fruits() {
+        let choice = $(this).val();
+        console.log(choice);
+      }
+
+      // function change_apple() {
+      //   $("#fruit").attr("src", "사과.png");
+      // }
+
+      // function change_banana() {
+      //   $("#fruit").attr("src", "바나나.png");
+      // }
+
+      // function change_grape() {
+      //   $("#fruit").attr("src", "포도.png");
+      // }
+
+      // function change_peach() {
+      //   $("#fruit").attr("src", "복숭아.png");
+      // }
+    </script>
   </body>
 </html>

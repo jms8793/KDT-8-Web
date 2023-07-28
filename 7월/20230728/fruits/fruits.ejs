@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 바꾸기</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .container {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        position: relative;
+      }
+      .box1 {
+        margin: auto;
+        width: 400px;
+        height: 475px;
+        border: 1px solid gray;
+      }
+      img {
+        width: 400px;
+        height: 475px;
+      }
+      .box2 {
+        text-align: center;
+      }
+      button {
+        background-color: black;
+        color: white;
+        margin: auto;
+      }
+    </style>
+    <script>
+      function change_fruits() {
+        let choice = $(this).attr("id");
+        $("#fruit").attr("src", `${choice}.png`);
+        console.log(choice);
+      }
+
+      function change_apple() {
+        $("#fruit").attr("src", "apple.png");
+      }
+
+      function change_banana() {
+        $("#fruit").attr("src", "banana.png");
+      }
+
+      function change_grape() {
+        $("#fruit").attr("src", "grape.png");
+      }
+
+      function change_peach() {
+        $("#fruit").attr("src", "peach.png");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1"><img id="fruit" src="apple.png" alt="과일 자리" /></div>
+      <div class="box2">
+        <button id="apple" onclick="change_apple()">사과</button>
+        <button id="banana" onclick="change_banana()">바나나</button>
+        <button id="grape" onclick="change_grape()">포도</button>
+        <button id="peach" onclick="change_peach()">복숭아</button>
+      </div>
+    </div>
+  </body>
+</html>
