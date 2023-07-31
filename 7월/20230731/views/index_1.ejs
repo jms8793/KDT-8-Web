@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <h4>GET 요청</h4>
+    <form action="/getForm" method="get">
+      <input type="text" placeholder="ID" name="id" required />
+      <input type="password" name="pw" placeholder="PW" required />
+      <button type="submit">제출</button>
+    </form>
+    <hr />
+    <h4>POST 요청</h4>
+    <form action="/postForm" method="post">
+      <input type="text" placeholder="ID" name="id" readonly />
+      <input type="password" name="pw" placeholder="PW" pattern="" /><br />
+      <input type="email" placeholder="email" /><br />
+      <input type="tel" /><br />
+      <input type="checkbox" /><br />
+      <input type="number" /><br />
+      <input type="date" /><br />
+      <input type="password" name="pw" placeholder="PW" disabled />
+      <button type="submit">제출</button>
+    </form>
+  </body>
+</html>
