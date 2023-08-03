@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+      fieldset {
+        width: 300px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form name="register" method="get">
+      이름 <input type="text" placeholder="이름" , name="name" />
+      <fieldset>
+        <legend>성별</legend>
+        <input type="radio" name="gender" id="male" value="남자" />남자
+        <input type="radio" name="gender" id="female" value="남자" />여자
+      </fieldset>
+      <fieldset>
+        <legend>생년월일</legend>
+        <select name="year" id="year">
+          <option value="2010">2010</option></select
+        >년
+        <select name="month" id="month">
+          <option value="1">1</option></select
+        >월<select name="day" id="day">
+          <option value="1">1</option></select
+        >일
+      </fieldset>
+      <fieldset>
+        <legend>관심사</legend>
+        <input type="checkbox" name="hobby" value="여행" /> 여행
+        <input type="checkbox" name="hobby" value="패션" /> 패션
+        <input type="checkbox" name="hobby" value="음식" /> 음식
+      </fieldset>
+
+      <button type="button" onclick="axiosGet()">회원가입</button>
+    </form>
+    <div class="resultBox"></div>
+    <script>
+      const resultBox = document.querySelector(".resultBox");
+      function axiosGet() {
+        console.log("axios get");
+        const form = document.forms["register"];
+        const hobbyarr = [];
+        var hobby = $("input[name='hobby']:checked");
+        $(hobby).each(function () {
+          hobbyarr.push($(this).val);
+        });
+        console.log(hobbyarr);
+        const data = {
+          name: form.name.value,
+          gender: form.gender.value,
+          year: form.year.value,
+          month: form.month.value,
+          day: form.month.value,
+          hobby: form.hobby.value,
+        };
+        axios({
+          method: "GET",
+          url: "/axios",
+          params: data,
+        }).then((res) => {
+          console.log(res);
+          resultBox.textContent = `GET /axios 요청 완료! 이름: ${res.data.name}
+          성별: ${res.data.gender}
+          생년월일: ${res.data.year}년${res.data.month}월${res.data.day}일
+          관심사: ${res.data.hobby}`;
+          resultBox.style.color = "green";
+        });
+      }
+    </script>
+  </body>
+</html>
